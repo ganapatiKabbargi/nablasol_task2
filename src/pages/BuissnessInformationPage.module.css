@@ -1,0 +1,91 @@
+.userProfile {
+  /* border: 2px solid #232; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.userProfile ::-webkit-scrollbar {
+  width: 0px;
+}
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  color: rgb(80, 80, 80);
+}
+.subTitle {
+  font-size: 16px;
+  margin: 10px 0px;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  color: rgb(105, 105, 105);
+}
+.generalInfo {
+  font-size: 15px;
+  color: rgb(45, 165, 250);
+  font-weight: 400;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 16px;
+}
+.userProfile .inputBox {
+  width: calc(100% / 2 - 20px);
+  margin: 13px 0 8px 0;
+}
+.inputBox input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+.inputBox .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.inputBox input:focus,
+.inputBox input:valid {
+  border-color: #9b59b6;
+}
+.documents input {
+  width: 80%;
+  height: 40px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+.documents span {
+  display: block;
+  margin-bottom: 5px;
+}
+.documents {
+  width: 100%;
+  max-width: 800px;
+  margin: 10px 0px;
+}
+.documentButton {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  font-size: 16px;
+  display: inline-block;
+  background-color: rgb(120, 119, 218);
+  color: #f3f3f3;
+  margin-left: 18px;
+}

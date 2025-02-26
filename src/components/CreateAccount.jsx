@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./CreateAccount.module.css";
 import ProfilePage from "../pages/ProfilePage";
+import BuissnessInformationPage from "../pages/BuissnessInformationPage";
 function CreateAccount() {
+  const [currentPage, setCurrentPage] = useState(0);
   return (
     <div className={styles.main}>
       {/* <div className={styles.header}>
@@ -12,11 +14,6 @@ function CreateAccount() {
         </div>
       </div> */}
       <div className={styles.formContainer}>
-        {/* <div className={styles.buttonContainer}>
-          <button className={styles.buttonEl}>Your Profile</button>
-          <button className={styles.buttonEl}>Buissness Information</button>
-          <button className={styles.buttonEl}>Additional Users</button>
-        </div> */}
         <div className={styles.barContainer}>
           <div className={styles.bar}>
             <span>1</span>Your Profile
@@ -29,15 +26,27 @@ function CreateAccount() {
           </div>
         </div>
         <form action="" className={styles.formEl}>
-          <ProfilePage />
+          <BuissnessInformationPage />
           <div className={styles.formButtonContainer}>
             <button className={styles.backButton} type="button">
-              {" "}
               Back To Login
             </button>
-            <button className={styles.nextButton} type="submit">
-              Next Step
-            </button>
+            <div>
+              {currentPage === 1 && (
+                <button
+                  className={styles.previousButton}
+                  type="button"
+                  onClick={() => {
+                    setCurrentPage((prev) => prev - 1);
+                  }}
+                >
+                  Previous Step
+                </button>
+              )}
+              <button className={styles.nextButton} type="submit">
+                Next Step
+              </button>
+            </div>
           </div>
         </form>
       </div>
