@@ -1,6 +1,14 @@
 import React from "react";
 import styles from "./BuissnessInformationPage.module.css";
-function BuissnessInformationPage() {
+function BuissnessInformationPage({
+  brandName,
+  brandType,
+  streetAddress,
+  city,
+  zipCode,
+  taxIdNumber,
+  updateFields,
+}) {
   return (
     <div className={styles.userProfile}>
       <div className={styles.title}>Buissness Information</div>
@@ -12,27 +20,64 @@ function BuissnessInformationPage() {
 
       <div className={styles.inputBox}>
         <span className={styles.details}>Brand Name*</span>
-        <input type="text" placeholder="Enter Your Brand Name" />
+
+        <input
+          type="text"
+          placeholder="Enter Your Brand Name"
+          value={brandName}
+          required
+          onChange={(e) => updateFields({ brandName: e.target.value })}
+        />
       </div>
       <div className={styles.inputBox}>
         <span className={styles.details}>Brand Type*</span>
-        <input type="text" placeholder="Enter Your Brand Type" />
+        <input
+          type="text"
+          placeholder="Enter Your Brand Type"
+          value={brandType}
+          required
+          onChange={(e) => updateFields({ brandType: e.target.value })}
+        />
       </div>
       <div className={styles.inputBox}>
         <span className={styles.details}>Street Address*</span>
-        <input type="text" placeholder="Enter Your Street Address" />
+        <input
+          type="text"
+          placeholder="Enter Your Street Address"
+          value={streetAddress}
+          required
+          onChange={(e) => updateFields({ streetAddress: e.target.value })}
+        />
       </div>
       <div className={styles.inputBox}>
         <span className={styles.details}>City*</span>
-        <input type="text" placeholder="Enter Your City " />
+        <input
+          type="text"
+          placeholder="Enter Your City "
+          value={city}
+          required
+          onChange={(e) => updateFields({ city: e.target.value })}
+        />
       </div>
       <div className={styles.inputBox}>
         <span className={styles.details}>Zip Code*</span>
-        <input type="text" placeholder="Enter Zip Code" />
+        <input
+          type="text"
+          placeholder="Enter Zip Code"
+          value={zipCode}
+          required
+          onChange={(e) => updateFields({ zipCode: e.target.value })}
+        />
       </div>
       <div className={styles.inputBox}>
         <span className={styles.details}>Tax ID Number*</span>
-        <input type="text" placeholder="Enter Tax ID Number" />
+        <input
+          type="number"
+          placeholder="Enter Tax ID Number"
+          value={taxIdNumber}
+          required
+          onChange={(e) => updateFields({ taxIdNumber: e.target.value })}
+        />
       </div>
       <div className={styles.generalInfo}>DOCUMENTS</div>
       <div className={styles.documents}>

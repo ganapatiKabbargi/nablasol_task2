@@ -61,11 +61,12 @@ button:focus-visible {
   align-items: center;
   flex-wrap: wrap;
   height: 50px;
-  padding: 0px 10px;
+
   margin-bottom: 10px;
   background-color: #ebebeb;
   border-radius: 10px;
 }
+
 .barContainer span {
   display: inline-block;
   width: 26px;
@@ -78,9 +79,11 @@ button:focus-visible {
 }
 .bar {
   width: calc(100% / 3);
+  height: 100%;
   font-size: 18px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .buttonContainer {
   display: flex;
@@ -140,4 +143,12 @@ button:focus-visible {
   display: inline-block;
   background-color: transparent;
   color: rgb(45, 165, 250);
+}
+
+.active {
+  background-color: rgb(45, 165, 250);
+  color: #f3f3f3;
+}
+.activeBorder {
+  border-radius: 0px 20px 20px 0px;
 }

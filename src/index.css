@@ -20,6 +20,7 @@ body {
   align-items: center;
   /* place-items: center; */
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  min-height: 100vh;
 }
 
 /* h1 {
