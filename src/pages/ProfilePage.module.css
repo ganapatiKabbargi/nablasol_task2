@@ -1,0 +1,47 @@
+.userProfile {
+  /* border: 2px solid #232; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 100%;
+}
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  color: rgb(80, 80, 80);
+}
+.subTitle {
+  font-size: 16px;
+  margin: 10px 0px;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  color: rgb(105, 105, 105);
+}
+.userProfile .inputBox {
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0 12px 0;
+}
+.inputBox input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  transition: all 0.4s ease;
+}
+.inputBox .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.inputBox input:focus,
+.inputBox input:valid {
+  border-color: #9b59b6;
+}
