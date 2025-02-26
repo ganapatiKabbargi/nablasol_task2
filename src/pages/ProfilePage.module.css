@@ -45,3 +45,10 @@
 .inputBox input:valid {
   border-color: #9b59b6;
 }
+
+@media screen and (max-width: 584px) {
+  .userProfile .inputBox {
+    width: 100%;
+    margin: 10px 0px 6px 0px;
+  }
+}

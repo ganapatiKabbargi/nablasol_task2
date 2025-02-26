@@ -64,6 +64,7 @@
   padding-left: 15px;
   font-size: 16px;
   transition: all 0.4s ease;
+  margin-bottom: 10px;
 }
 .documents span {
   display: block;
@@ -88,4 +89,42 @@
   background-color: rgb(120, 119, 218);
   color: #f3f3f3;
   margin-left: 18px;
+}
+.brandType {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 11px;
+  background-color: rgb(157, 157, 157);
+  color: #f3f3f3;
+  margin-left: 10px;
+  position: relative;
+}
+.brandTypeBox {
+  position: absolute;
+  display: inline-block;
+  width: 260px;
+  top: 0px;
+  left: 30px;
+  background-color: rgb(23, 19, 19);
+  opacity: 0.6;
+  border-radius: 5px;
+  padding: 5px;
+  display: none;
+  font-size: 10px;
+}
+.brandType:hover .brandTypeBox {
+  display: block;
+}
+
+@media screen and (max-width: 584px) {
+  .userProfile .inputBox {
+    width: 100%;
+    margin: 10px 0px 6px 0px;
+  }
+  .documentButton {
+    margin-left: 5px;
+  }
 }

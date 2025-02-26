@@ -30,7 +30,18 @@ function BuissnessInformationPage({
         />
       </div>
       <div className={styles.inputBox}>
-        <span className={styles.details}>Brand Type*</span>
+        <span className={styles.details}>
+          Brand Type*{" "}
+          <div className={styles.brandType}>
+            ?
+            <div className={styles.brandTypeBox}>
+              Local : Brands with distribution in 3 division or less or multiple
+              divisions but a total of 150 stores or less. National : Brands
+              with distribution in 4 or more divisions or in more than 150
+              stores.
+            </div>
+          </div>
+        </span>
         <input
           type="text"
           placeholder="Enter Your Brand Type"
@@ -85,11 +96,11 @@ function BuissnessInformationPage({
           Once the following documents are signed, you'll be ready to get starte
         </span>
         <input type="text" placeholder="Electronically sign the agreement" />
-        <button className={styles.documentButton}>1</button>
+        <button className={styles.documentButton}>&#62;</button>
       </div>
       <div className={styles.documents}>
         <input type="text" placeholder="Electronically sign the agreement" />
-        <button className={styles.documentButton}>1</button>
+        <button className={styles.documentButton}>&#62;</button>
       </div>
       <div className={styles.generalInfo}>COI PDF UPLOAD</div>
       <div className={styles.documents}>
@@ -97,7 +108,7 @@ function BuissnessInformationPage({
           Once the following documents are signed, you'll be ready to get starte
         </span>
         <input type="text" placeholder="Electronically sign the agreement" />
-        <button className={styles.documentButton}>1</button>
+        <button className={styles.documentButton}>&#62;</button>
       </div>
     </div>
   );

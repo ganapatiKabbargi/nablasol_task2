@@ -35,18 +35,18 @@ function CreateAccount() {
     if (currentPage === 0) {
       setCurrentPage((prev) => prev + 1);
     } else {
-      console.log(data);
+      // localStorage.clear();
+      localStorage.setItem("userData", JSON.stringify(data));
+      alert("Data is stored in local storage");
+      window.location.reload();
     }
   }
   return (
     <div className={styles.main}>
-      {/* <div className={styles.header}>
-        <div className={styles.logo}>Logo</div>
+      <div className={styles.headingContainer}>
         <div className={styles.heading}>Create New Account</div>
-        <div className={styles.contact}>
-          <button className={styles.contactButton}>Contact</button>
-        </div>
-      </div> */}
+      </div>
+
       <div className={styles.formContainer}>
         <div className={styles.barContainer}>
           <div
@@ -61,7 +61,7 @@ function CreateAccount() {
               currentPage === 1 && styles.activeBorder
             }`}
           >
-            <span>2</span>Buissness Information
+            <span>2</span>Buissness Info
           </div>
           <div
             className={`${styles.bar} ${currentPage === 2 && styles.active}${
@@ -75,7 +75,7 @@ function CreateAccount() {
           {pages[currentPage]}
           <div className={styles.formButtonContainer}>
             <button className={styles.backButton} type="button">
-              Back To Login
+              &#60; Back To Login
             </button>
             <div>
               {currentPage === 1 && (
@@ -86,11 +86,11 @@ function CreateAccount() {
                     setCurrentPage((prev) => prev - 1);
                   }}
                 >
-                  Previous Step
+                  &#60; Previous Step
                 </button>
               )}
               <button className={styles.nextButton} type="submit">
-                {currentPage === 1 ? "Submit" : "Next Step"}
+                {currentPage === 1 ? "Submit" : "Next Step"} &#62;
               </button>
             </div>
           </div>
